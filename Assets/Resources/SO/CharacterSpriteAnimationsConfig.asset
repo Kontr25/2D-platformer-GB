@@ -26,6 +26,25 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 64215f3cec2b9e1458bb1ebd38db6ea4, type: 3}
   - Track: 1
     Sprites:
+    - {fileID: 21300000, guid: 42352b13dc4e51f4b85d5470637d14c0, type: 3}
+    - {fileID: 21300000, guid: 34b270fc42f2d2643b8258f867d2d773, type: 3}
+    - {fileID: 21300000, guid: d062f7cc5c913494597815d7818ab8a1, type: 3}
+    - {fileID: 21300000, guid: b814d919721b23946a0586a6e2d38c82, type: 3}
+    - {fileID: 21300000, guid: 41631751ff9f3294998aec51cbcaa5a7, type: 3}
+    - {fileID: 21300000, guid: f33f4b6800e593e42856416769329233, type: 3}
+    - {fileID: 21300000, guid: 2f65a1bfa5436cf4887a48dc66ad2e15, type: 3}
+    - {fileID: 21300000, guid: 50734d8ca66367a4489e36e7e4bee65a, type: 3}
+    - {fileID: 21300000, guid: 690663214eb36ee4398a66596d332f88, type: 3}
+    - {fileID: 21300000, guid: c7ee4bd81c704fb4db1705000a1448df, type: 3}
+    - {fileID: 21300000, guid: 7d80013fec460a84cbff1523cdc1a109, type: 3}
+    - {fileID: 21300000, guid: 4b3f9a7f73a09e24d8e4cd9b3988b024, type: 3}
+    - {fileID: 21300000, guid: 6897560c508b1894192eae1766ad9a10, type: 3}
+    - {fileID: 21300000, guid: 1e51cd8c5926754419470895eb4085b7, type: 3}
+    - {fileID: 21300000, guid: 280822773c1ef4c4297444627b8a04dd, type: 3}
+    - {fileID: 21300000, guid: 7b8d0cf8faae8714eab4aa1e283b3756, type: 3}
+    - {fileID: 21300000, guid: 0c0f58f3b71d1c4438d2864d10dee6b0, type: 3}
+  - Track: 0
+    Sprites:
     - {fileID: 21300000, guid: 5d67e9184ff842e4fb6d840051111d21, type: 3}
     - {fileID: 21300000, guid: 16fc9053cb7ea9944911b0e26b777f23, type: 3}
     - {fileID: 21300000, guid: 0f27b0c38c9c28343a5fd955a6bb01cb, type: 3}
