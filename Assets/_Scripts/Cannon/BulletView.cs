@@ -9,7 +9,7 @@ namespace _Scripts.Cannon
         [Header("Settings")]
     
         private float _radius = 0.3f;
-        private float _groundLevel = 0;
+        private float _groundLevel = -0.74f;
         private float _acceleration = -10;
         public float Radius => _radius;
         public float GroundLevel => _groundLevel;

@@ -4,6 +4,7 @@ namespace _Scripts.Animations
     {
         run,
         idle,
-        jump
+        jump,
+        dead
     }
 }

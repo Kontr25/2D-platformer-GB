@@ -5,7 +5,7 @@ namespace _Scripts.Cannon
 {
     public class BulletsEmitter : MonoBehaviour
     {
-        private const float _delay = 1;
+        private const float _delay = 2;
         private const float _startSpeed = 5;
 
         private List<Bullet> _bullets = new List<Bullet>();

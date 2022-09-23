@@ -18,18 +18,22 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private CannonView _cannonView;
     [SerializeField] private List<BulletView> _bullets;
 
+    private ContactsPoller _contactsPoller;
     private ParalaxManager _paralaxManager;
     private SpriteAnimator _characterSpriteAnimator;
     private SpriteAnimator _wolfSpriteAnimator;
     private MainHeroWalker _mainHeroWalker;
+    private MainHeroPhysicWalker _mainHeroPhysicWalker;
     private AimingMuzzle _aimingMuzzle;
     private BulletsEmitter _bulletsEmitter;
 
     private void Start()
     {
+        _contactsPoller = new ContactsPoller(_characterView);
         _paralaxManager = new ParalaxManager(_camera, _background.transform);
         _characterSpriteAnimator = new SpriteAnimator(_CharacterSpriteAnimationConfig);
-        _mainHeroWalker = new MainHeroWalker(_characterView, _characterSpriteAnimator);
+        _mainHeroPhysicWalker = new MainHeroPhysicWalker(_characterView, _characterSpriteAnimator,_contactsPoller);
+        //_mainHeroWalker = new MainHeroWalker(_characterView, _characterSpriteAnimator);
         _aimingMuzzle = new AimingMuzzle(_cannonView.transform, _characterView.transform);
         _bulletsEmitter = new BulletsEmitter(_bullets, _cannonView.MuzzleTransform);
         
@@ -41,9 +45,14 @@ public class EntryPoint : MonoBehaviour
     {
         _paralaxManager.Update();
         _characterSpriteAnimator.Update();
-        _mainHeroWalker.Update();
+        //_mainHeroWalker.Update();
         _aimingMuzzle.Update();
         _bulletsEmitter.Update();
         _wolfSpriteAnimator.Update();
+    }
+
+    private void FixedUpdate()
+    {
+        _mainHeroPhysicWalker.FixedUpdate();
     }
 }
