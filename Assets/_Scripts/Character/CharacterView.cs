@@ -11,7 +11,7 @@ namespace _Scripts.Character
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
         [Header("Settings")]
-        [SerializeField] private float _walkSpeed;
+        [SerializeField] private float _walkSpeed = 150f;
         [SerializeField] private float _animationsSpeed = 3;
         [SerializeField] private float _jumpStartSpeed ;
         [SerializeField] private float _movingTresh = 0.1f;

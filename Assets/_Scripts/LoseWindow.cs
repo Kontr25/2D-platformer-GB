@@ -6,10 +6,10 @@ namespace _Scripts
 {
     public class LoseWindow : MonoBehaviour, IFinishable
     {
-        [SerializeField] private Transform[] _endPoint;
+        [SerializeField] private Transform _endPoint;
         public void StartActionOnLose()
         {
-                transform.DOMove(_endPoint[0].position, .5f);
+                transform.DOMove(_endPoint.position, .5f);
         }
 
         public void RestartLevel()

@@ -13,8 +13,10 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private Transform _background;
     [SerializeField] private CharacterView _characterView;
     [SerializeField] private EnemyView _enemyView;
+    [SerializeField] private ObstacleView _fireballView;
     [SerializeField] private SpriteAnimationsConfig _CharacterSpriteAnimationConfig;
     [SerializeField] private SpriteAnimationsConfig _EnemySpriteAnimationConfig;
+    [SerializeField] private SpriteAnimationsConfig _FireBallSpriteAnimationConfig;
     [SerializeField] private CannonView _cannonView;
     [SerializeField] private List<BulletView> _bullets;
 
@@ -22,6 +24,7 @@ public class EntryPoint : MonoBehaviour
     private ParalaxManager _paralaxManager;
     private SpriteAnimator _characterSpriteAnimator;
     private SpriteAnimator _wolfSpriteAnimator;
+    private SpriteAnimator _fireballSpriteAnimator;
     private MainHeroWalker _mainHeroWalker;
     private MainHeroPhysicWalker _mainHeroPhysicWalker;
     private AimingMuzzle _aimingMuzzle;
@@ -38,7 +41,9 @@ public class EntryPoint : MonoBehaviour
         _bulletsEmitter = new BulletsEmitter(_bullets, _cannonView.MuzzleTransform);
         
         _wolfSpriteAnimator = new SpriteAnimator(_EnemySpriteAnimationConfig);
+        _fireballSpriteAnimator = new SpriteAnimator(_FireBallSpriteAnimationConfig);
         _wolfSpriteAnimator.StartAnimation(_enemyView.SpriteRenderer, Track.idle, true, 10);
+        _fireballSpriteAnimator.StartAnimation(_fireballView.SpriteRenderer, Track.idle, true, 25);
     }
 
     private void Update()
@@ -49,6 +54,7 @@ public class EntryPoint : MonoBehaviour
         _aimingMuzzle.Update();
         _bulletsEmitter.Update();
         _wolfSpriteAnimator.Update();
+        _fireballSpriteAnimator.Update();
     }
 
     private void FixedUpdate()

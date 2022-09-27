@@ -4,10 +4,10 @@ namespace _Scripts
     using UnityEngine;
     public class WinWindow : MonoBehaviour, IFinishable
     {
-        [SerializeField] private Transform[] _endPoint;
+        [SerializeField] private Transform _endPoint;
         public void StartActionOnWin()
         {
-                transform.DOMove(_endPoint[0].position, .5f);
+                transform.DOMove(_endPoint.position, .5f);
         }
 
         public void StartActionOnLose()

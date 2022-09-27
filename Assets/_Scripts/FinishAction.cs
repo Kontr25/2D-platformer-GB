@@ -7,12 +7,6 @@ namespace _Scripts
     public class FinishAction : MonoBehaviour
     {
         public Action<FinishType> Finish;
-
-        public static bool Defeat
-        {
-            get;
-            set;
-        }
     
         [SerializeField] private List<GameObject> _finishableObjects;
 
@@ -28,13 +22,10 @@ namespace _Scripts
             Finish = null;
         }
 
-        private void Update()
+        private void Activate(FinishType finishType = FinishType.None)
         {
-            _sessionTime += Time.deltaTime;
-        }
-
-        public void Activate(FinishType finishType = FinishType.None)
-        {
+            if (_finishableObjects.Count <= 0) 
+                return;
             if (_finishableObjects.Count > 0)
             {
                 switch (finishType)
@@ -49,9 +40,6 @@ namespace _Scripts
                         break;
 
                     case FinishType.Lose:
-
-                        Defeat = true;
-                    
                         foreach (var obj in _finishableObjects)
                         {
                             if (obj.TryGetComponent(out IFinishable finishable))

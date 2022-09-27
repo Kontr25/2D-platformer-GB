@@ -8,7 +8,6 @@ namespace _Scripts.Character
         private const string _verticalAxisName = "Vertical";
         private const string _horizontalAxisName = "Horizontal";
         private const float _animationsSpeed = 10;
-        private const float _walkSpeed = 150;
         private const float _jumpForse = 350;
         private const float _jumpThresh = 0.1f;
         private const float _flyThresh = 1f;
@@ -39,7 +38,7 @@ namespace _Scripts.Character
                     (_goSideWay > 0 || !_contactsPoller.HasLeftContacts) &&
                     (_goSideWay < 0 || !_contactsPoller.HasRightContacts))
                 {
-                    newVelocity = Time.fixedDeltaTime * _walkSpeed *
+                    newVelocity = Time.fixedDeltaTime * _characterView.WalkSpeed *
                                   (_goSideWay < 0 ? -1 : 1);
                 }
                 _characterView.Rigidbody2D.velocity = _characterView.Rigidbody2D.velocity.Change(
