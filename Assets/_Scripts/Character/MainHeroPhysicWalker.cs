@@ -7,7 +7,7 @@ namespace _Scripts.Character
     {
         private const string _verticalAxisName = "Vertical";
         private const string _horizontalAxisName = "Horizontal";
-        private const float _animationsSpeed = 10;
+        private float _animationsSpeed;
         private const float _jumpForse = 350;
         private const float _jumpThresh = 0.1f;
         private const float _flyThresh = 1f;
@@ -23,6 +23,7 @@ namespace _Scripts.Character
             _characterView = characterView;
             _spriteAnimator = spriteAnimator;
             _contactsPoller = contactsPoller;
+            _animationsSpeed = _characterView.AnimationsSpeed;
         }
         public void FixedUpdate()
         {
